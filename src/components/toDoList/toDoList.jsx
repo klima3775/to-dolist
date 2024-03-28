@@ -3,7 +3,6 @@ import React from "react";
 function TodoList({ todos, toggleTodo }) {
   return (
     <ul className="todo-list">
-      {" "}
       {todos.map((todo, index) => (
         <li
           key={index}
