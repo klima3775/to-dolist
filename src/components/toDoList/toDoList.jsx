@@ -14,8 +14,6 @@ function TodoList({ todos, toggleTodo }) {
       ))}
     </ul>
   );
-
-  dstytrdsdsd;
 }
 
 export default TodoList;
