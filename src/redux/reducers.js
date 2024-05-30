@@ -1,6 +1,6 @@
 // reducers.js
 
-import { ADD_TODO, TOGGLE_TODO } from "./actions";
+import { ADD_TODO, TOGGLE_TODO, DELETE_TODO } from "./actions";
 
 const initialState = {
   todos: [],
@@ -26,6 +26,11 @@ const todoApp = (state = initialState, action) => {
         todos: state.todos.map((todo) =>
           todo.id === action.id ? { ...todo, completed: !todo.completed } : todo
         ),
+      };
+    case DELETE_TODO:
+      return {
+        ...state,
+        todos: state.todos.filter((todo) => todo.id !== action.id),
       };
     default:
       return state;
