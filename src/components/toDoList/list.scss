@@ -19,14 +19,12 @@ button {
   }
 }
 
-.todo-item button {
-  margin-left: 60px;
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-  @media (max-width: 600px) {
-    margin-left: 30px;
-  }
-
-  @media (max-width: 400px) {
-    margin-left: 15px;
+  .todo-item button {
+    margin-left: 0;
   }
 }
